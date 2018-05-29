@@ -1,0 +1,7 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/stcpev1/DeathBanV1
+branches:
+- master
+projects:
+  DeathBanV1:
+    path: ""
+...
