@@ -47,7 +47,7 @@ class Main extends PluginBase implements Listener
 	public function onDeath(PlayerDeathEvent $ev)
 	{
 		$this->addBan($ev->getPlayer());
-		$ev->getPlayer()->kick('You are Death Banned for ' . $this->getBanTime($ev->getPlayer()), false);
+		$ev->getPlayer()->kick('You Are Death Banned For ' . $this->getBanTime($ev->getPlayer()), false);
 	}
 
 	private function isBanned(\pocketmine\Player $p)
@@ -63,7 +63,7 @@ class Main extends PluginBase implements Listener
 				return true;
 			}
 		}
-		return false;
+		return true;
 	}
 
 	private function addBan(\pocketmine\Player $p)
@@ -158,6 +158,6 @@ class callBackKick extends PluginTask
 
 	public function onRun($tick)
 	{
-		$this->player->kick('You are Death Banned for ' . $this->main->getBanTime($this->player), false);
+		$this->player->kick('You are Death Banned for ' . $this->main->getBanTime($this->player), true);
 	}
 }
